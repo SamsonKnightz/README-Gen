@@ -9,6 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "8.2.4"
-  }
+    "inquirer": "^8.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamsonKnightz/README-Gen.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SamsonKnightz/README-Gen/issues"
+  },
+  "homepage": "https://github.com/SamsonKnightz/README-Gen#readme"
 }
