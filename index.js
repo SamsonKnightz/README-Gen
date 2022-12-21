@@ -6,13 +6,14 @@ const fs = require("fs")
 const prompt = inquirer.createPromptModule();
 
 // TODO: Create a function to write README file
-function writeToFile(readMe)  {
+const writeToFile = (readMe) => {
     try {
-        fs.writeFileSync("README.md", readMe);
-    } catch(err) {
-        console.log(err);
+        fs.writeFileSync('README.md', readMe);
+        console.log("success");
+    } catch (err) {
+        console.log(err)
     }
-}
+};
 
 const generateReadME = (answers) => {
     `# Title
