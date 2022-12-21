@@ -6,16 +6,17 @@ const fs = require("fs")
 const prompt = inquirer.createPromptModule();
 
 // TODO: Create a function to write README file
-function writeToFile(readMe, )  {
+function writeToFile(readMe)  {
     try {
-        fs.writeToSync("createdREADME.md", readMe);
+        fs.writeFileSync("README.md", readMe);
     } catch(err) {
         console.log(err);
     }
 }
 
 const generateReadME = (answers) => {
-    `# README.MD
+    `# Title
+    ${answers.Title}
     ## Description
     ${answers.Description}
     ## Table Of Contents
@@ -29,11 +30,21 @@ const generateReadME = (answers) => {
     ## Information
     ${answers.Information}
     ## Contributing
-    ${answers.Contributing}`
+    ${answers.Contributing}
+    ## Tests
+    ${answers.Tests}
+    ## Questions
+    ${answers.Questions}`
 }
 
 prompt([
-    {
+    {   
+        type: "input",
+        message: "What is your project Title?",
+        name: "Title",
+    },
+    {   
+        type: "input",
         message: "Write a description of README",
         name: "Description",
     },
@@ -61,7 +72,15 @@ prompt([
     },
     {
         message: "What contribution?",
-        name: "contributing",
+        name: "Contributing",
+    },
+    {
+        message: "Test?",
+        name: "Test",
+    },
+    {
+        message: "Questions?",
+        name: "Questions",
     },
 ]).then(generateReadME)
 .then(writeToFile)
