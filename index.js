@@ -50,14 +50,17 @@ prompt([
         name: "Description",
     },
     {
+        type: "input",
         message: "What are your table of contents?",
         name: "TableOfContents",
     },
     {
+        type: "input",
         message: "How do you install?",
         name: "Installation",
     },
     {
+        type: "input",
         message: "What usage?",
         name: "Usage",
     },
@@ -68,18 +71,22 @@ prompt([
         choices: ["MIT", "other", "GPLv2", "Apache", "GPLv3"]
     },
     {
+        type: "input",
         message: "What information?",
         name: "information",
     },
     {
+        type: "input",
         message: "What contribution?",
         name: "Contributing",
     },
     {
+        type: "input",
         message: "Test?",
         name: "Test",
     },
     {
+        type: "input",
         message: "Questions?",
         name: "Questions",
     },
