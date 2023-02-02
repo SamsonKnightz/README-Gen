@@ -1,9 +1,5 @@
-# README.MD
-
 # ${data.project}
 ![GitHub Liscense](https://img.shields.io/badge/license-${data.license})
-
-Check out my other [projects](https://github.com/SamsonKnightz) on github.
 ## Description
 
 ## Table Of Contents
@@ -28,5 +24,13 @@ Check out my other [projects](https://github.com/SamsonKnightz) on github.
 ## Contributing
 
 ## Tests
+
+```
+npm test
+```
+
+## Questions
+
+If you have any questions about the repo, please contact me at (https://github.com/SamsonKnightz)
 
 

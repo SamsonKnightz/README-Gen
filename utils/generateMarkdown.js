@@ -12,38 +12,60 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `#
 
-  # ${data.project}
-![GitHub Liscense](https://img.shields.io/badge/license-${data.license})
+  # ${data.Title}
+  ![GitHub Liscense](https://img.shields.io/badge/license-${data.license})
+  ## Description
 
-Check out my other [projects](https://github.com/SamsonKnightz) on github.
-## Description
+  ${data.Description}
+  
+  ## Table Of Contents
+  
+   * [Installation](#Installation)
 
-## Table Of Contents
+  ${data.Installation}
+  
+   * [Usage](#Usage)
 
- * [Installation](#Installation)
+  ${data.Usage}
 
- * [Usage](#Usage)
+   * [License](#License)
 
- * [Information](#Information)
+    ${data.license}
 
- * [Contributing](#Contributing)
+   * [Contributing](#Contributing)
 
- * [Tests](#Tests)
+    ${data.Contributing}
 
- * [Questions](#Questions)
-## Installation
+   * [Tests](#Tests)
 
-## Usage
+    ${data.Tes}
 
-## Information
+   * [Questions](#Questions)
 
-## Contributing
-
-## Tests
-
-
+      ${data.Questions}
+      
+  ## Installation
+  
+  ## Usage
+  
+  ## Information
+  
+  ## Contributing
+  
+  ## Tests
+  
+  \`\`\`\
+  npm test
+  \`\`\`\
+  
+  ## Questions
+  
+  If you have any questions about the repo, please contact me at (https://github.com/SamsonKnightz)
+  
+  
+  
 `;
 }
 
