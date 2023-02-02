@@ -5,55 +5,16 @@ const generateMarkdown = require(`./utils/generateMarkdown`)
 const fs = require("fs")
 
 // TODO: Create an array of questions for user input
-const questions = [];
-// TODO: Create a function to write README file
-const writeToFile = (readMe) => {
-    try {
-        fs.writeFileSync('README.md', readMe);
-        console.log("success");
-    } catch (err) {
-        console.log(err)
-    }
-};
-
-const generateReadME = (answers) => {
-    `# Title
-    ${answers.Title}
-    ## Description
-    ${answers.Description}
-    ## Table Of Contents
-    ${answers.TableOfContents}
-    ## Installation
-    ${answers.Installation}
-    ## Usage
-    ${answers.Usage}
-    ## License
-    ${answers.License}
-    ## Information
-    ${answers.Information}
-    ## Contributing
-    ${answers.Contributing}
-    ## Tests
-    ${answers.Tests}
-    ## Questions
-    ${answers.Questions}`
-}
-
-prompt([
-    {   
+const questions = [
+    {
         type: "input",
         message: "What is your project Title?",
         name: "Title",
     },
-    {   
+    {
         type: "input",
         message: "Write a description of README",
         name: "Description",
-    },
-    {
-        type: "input",
-        message: "What are your table of contents?",
-        name: "TableOfContents",
     },
     {
         type: "input",
@@ -90,11 +51,17 @@ prompt([
         type: "input",
         message: "Questions?",
         name: "Questions",
-    },
-]).then(generateReadME)
-.then(writeToFile)
+    },];
+// TODO: Create a function to write README file
+const writeToFile = (fileName, data) => {
+
+};
+
+function init() {
+    prompt(questions)
+};
+
 
 // TODO: Create a function to initialize app
-// function init() {}
-// Function call to initialize app
+init();
 
