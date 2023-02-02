@@ -1,10 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const prompt = inquirer.createPromptModule();
 const fs = require("fs")
 
 // TODO: Create an array of questions for user input
-const prompt = inquirer.createPromptModule();
-
+const questions = [];
 // TODO: Create a function to write README file
 const writeToFile = (readMe) => {
     try {
