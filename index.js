@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const prompt = inquirer.createPromptModule();
 const generateMarkdown = require(`./utils/generateMarkdown`)
+const fs = require(`fs`);
 
 
 // TODO: Create an array of questions for user input
@@ -33,7 +34,7 @@ const questions = [
         name: "license",
         type: "rawlist",
         default: "MIT",
-        choices: ["MIT", "other", "GPLv2", "Apache", "GPLv3"]
+        choices: ["MIT", "MPL-2.0", "Apache-2.0", "GPLv3"]
     },
     {
         type: "input",
@@ -71,14 +72,19 @@ const questions = [
 ];
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-
+    try {
+        fs.writeFileSync(fileName, data);
+    } catch(err) {
+        console.log(err);
+        process.exit(1);
+    }
 };
 
 function init() {
     prompt(questions)
     .then((answers) => {
         const result = generateMarkdown(answers);
-        console.log(result);
+        writeToFile(`./dist/README.md`, result);
     })
 };
 
