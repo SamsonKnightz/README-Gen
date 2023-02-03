@@ -20,16 +20,19 @@ const questions = [
         type: "input",
         message: "How do you install?",
         name: "Installation",
+        default: "npm install"
     },
     {
         type: "input",
-        message: "What usage?",
+        message: "How do you use?",
         name: "Usage",
+        default: "node index.js"
     },
     {
         message: "What license?",
         name: "license",
-        type: "list",
+        type: "rawlist",
+        default: "MIT",
         choices: ["MIT", "other", "GPLv2", "Apache", "GPLv3"]
     },
     {
@@ -39,13 +42,15 @@ const questions = [
     },
     {
         type: "input",
-        message: "What contribution?",
+        message: "What contributions?",
         name: "Contributing",
+        default: ""
     },
     {
         type: "input",
-        message: "Test?",
+        message: "Testing instructions?",
         name: "Test",
+        default: "npm run test",
     },
     {
         type: "input",

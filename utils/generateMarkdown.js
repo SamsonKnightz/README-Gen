@@ -16,45 +16,47 @@ function generateMarkdown(data) {
 
   # ${data.Title}
   ![GitHub Liscense](https://img.shields.io/badge/license-${data.license})
+  
   ## Description
-
+  
   ${data.Description}
   
   ## Table Of Contents
   
-   * [Installation](#Installation)
-
-  ${data.Installation}
+  * [Installation](#Installation)
   
-   * [Usage](#Usage)
-
-  ${data.Usage}
-
-   * [License](#License)
-
-    ${data.license}
-
-   * [Contributing](#Contributing)
-
-    ${data.Contributing}
-
-   * [Tests](#Tests)
-
-    ${data.Tes}
-
-   * [Questions](#Questions)
-
-      ${data.Questions}
-      
+  * [Usage](#Usage)
+  
+  * [License](#License)
+  
+  * [Contributing](#Contributing)
+  
+  * [Tests](#Tests)
+  
+  * [Questions](#Questions)
+  
+  
   ## Installation
+  
+  ${data.Installation}
+
+  ## License
+  
+  This project is licensed with ${data.license}
   
   ## Usage
   
-  ## Information
+  ${data.Usage}
   
   ## Contributing
   
+  ${data.Contributing}
+  
   ## Tests
+  
+  
+  In order to get the test to run, please enter the commands
+  ${data.Test}
   
   \`\`\`\
   npm test
@@ -64,9 +66,10 @@ function generateMarkdown(data) {
   
   If you have any questions about the repo, please contact me at (https://github.com/SamsonKnightz)
   
+  ${data.Questions}
   
   
-`;
+  `;
 }
 
 module.exports = generateMarkdown;
