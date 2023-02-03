@@ -37,11 +37,6 @@ const questions = [
     },
     {
         type: "input",
-        message: "What information?",
-        name: "information",
-    },
-    {
-        type: "input",
         message: "What contributions?",
         name: "Contributing",
         default: ""
@@ -56,7 +51,17 @@ const questions = [
         type: "input",
         message: "Questions?",
         name: "Questions",
-    },];
+        default: "",
+    },
+    {
+        type: "input",
+        message: "What is your github user name?",
+        name: "github",
+        default: "githubusername"
+
+    }
+
+];
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
 
@@ -64,6 +69,10 @@ const writeToFile = (fileName, data) => {
 
 function init() {
     prompt(questions)
+    .then((answers) => {
+        const result = generateMarkdown(answers);
+        console.log(result);
+    })
 };
 
 
