@@ -49,7 +49,7 @@
 
   ## Video
 
-  <iframe src="https://drive.google.com/file/d/1WqJ_flIBGDGd_Jv9P5y05fAJw7e2Y-Rj/preview" width="640" height="480"></iframe>
+  ![gif](./assets/readmegeneratorgif.gif)
   
   ## Questions
   
