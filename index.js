@@ -59,6 +59,13 @@ const questions = [
         name: "github",
         default: "githubusername"
 
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email",
+        default: "email"
+
     }
 
 ];
