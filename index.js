@@ -1,11 +1,14 @@
-// TODO: Include packages needed for this application
+// we used inquirer prompts to create our prompt module.
+// we require our markdown as we call it later in a function.
+// We use fs to write our files in sync with our data collected.
+
 const inquirer = require('inquirer');
 const prompt = inquirer.createPromptModule();
 const generateMarkdown = require(`./utils/generateMarkdown`)
 const fs = require(`fs`);
 
 
-// TODO: Create an array of questions for user input
+// Here is the array of questions for the prompt module to pass through.
 const questions = [
     {
         type: "input",
@@ -70,7 +73,7 @@ const questions = [
     }
 
 ];
-// TODO: Create a function to write README file
+// Here is the function to write to the file. When we recieve the filename and data, we perform a try catch, try write to sync the file with the data, otherwise throw error.
 const writeToFile = (fileName, data) => {
     try {
         fs.writeFileSync(fileName, data);
@@ -80,6 +83,7 @@ const writeToFile = (fileName, data) => {
     }
 };
 
+// This is the function procedure of our index.js file. When we run the command node index.js, we will prompt the user with the questions array, then with the answers we will create a markdown using the answers, then write the README file to the location of our dist folder.
 function init() {
     prompt(questions)
     .then((answers) => {
@@ -89,6 +93,6 @@ function init() {
 };
 
 
-// TODO: Create a function to initialize app
+// Our function that initializes the app.
 init();
 

@@ -1,22 +1,20 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// This function will render the license badge, the information that was accepted from our index.js will automatically populate using template literal
 function renderLicenseBadge(license) {
   return `[![License: ${license}](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/${license})`
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
+// This function will render the license link, the information that was accepted from our index.js will automatically populate using template literal
 function renderLicenseLink(license) {
   return `[${license}](https://opensource.org/licenses/${license})`
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// This function will render both our license badge and link for our license section.
 function renderLicenseSection(license) {
   return `${renderLicenseBadge(license)}(https://opensource.org/licenses/${license}`
 }
 
-// TODO: Create a function to generate markdown for README
+// Here when our generate markdown function is performed, using our data from index, we return the generatemarkdown with the data filled out.
 function generateMarkdown(data) {
   return `
 
